@@ -14,7 +14,7 @@ function getIFLAME(){
               const movieElement = movieList.querySelectorAll("li")[i];
               if(movieElement.querySelector("a").classList.contains("is-selected")){
                 if(movieList.querySelectorAll("li")[i+1].classList.contains("evaluation-test")){
-                  movieList.querySelectorAll("li")[i+1].querySelector("a").click();
+                  setTimeout(()=>{movieList.querySelectorAll("li")[i+1].querySelector("a").click()}, 1000);
                     for(let j=0;j < 8000; j+= 1000){
                       setTimeout(() => {
                         movieList.style.backgroundColor="red";
@@ -35,7 +35,7 @@ function getIFLAME(){
                   }
                 }
 
-                movieList.querySelectorAll("li")[i+1].querySelector("a").click();
+                setTimeout(()=>{movieList.querySelectorAll("li")[i+1].querySelector("a").click()}, 1000);
               }
             }
           }, { once: true });
