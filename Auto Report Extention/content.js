@@ -1,3 +1,9 @@
+// ----------------------------
+
+// このプログラムはベータ板です。
+
+// ----------------------------
+
 let videoSrc = "";
 
 function getIFLAME(){
@@ -26,10 +32,9 @@ function getIFLAME(){
           let movieList = document.querySelector('.movie').parentNode;
           for(let i = 0; i < movieList.querySelectorAll("li").length; i++){
             const movieElement = movieList.querySelectorAll("li")[i];
-
             for(;;){
               // Nプラス教材をここで省く
-              console.log(movieList.querySelectorAll("li")[i+1]);
+              console.log(movieList.querySelectorAll("li")[i+1]);  
               if(movieList.querySelectorAll("li")[i+1].classList.contains("supplement")){
                 i++;
               }else{
@@ -39,6 +44,7 @@ function getIFLAME(){
 
             if(movieElement.querySelector("a").classList.contains("is-selected")){
               if(movieList.querySelectorAll("li")[i+1].classList.contains("evaluation-test")){
+                console.log("point_1")
                 setTimeout(()=>{movieList.querySelectorAll("li")[i+1].querySelector("a").click()
                   // ここで画面を赤く点滅させる
                   for(let j=0;j < 6000; j+= 1000){
@@ -62,7 +68,6 @@ function getIFLAME(){
       }
     }
   }
-  setTimeout(getIFLAME, 1000);
 }
 
-getIFLAME()
+getIFLAME();
