@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Report Extention(Beta)",
+  "version": "0.0",
+  "permissions": [],
+  "host_permissions": ["https://www.nnn.ed.nico/courses/*"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.nnn.ed.nico/courses/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
