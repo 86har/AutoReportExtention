@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Auto Report Extention",
+  "name": "Auto Report Extention(Beta)",
   "version": "1.0",
   "permissions": [],
   "host_permissions": ["https://www.nnn.ed.nico/courses/*"],
