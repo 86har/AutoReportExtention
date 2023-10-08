@@ -18,8 +18,6 @@ function getIFLAME(){
   
         videoSrc = videoSrcData;
         video.addEventListener('ended', function() {
-          console.log("debug_point-4");
-  
           let movieList = document.querySelector('.movie').parentNode;
           for(let i = 0; i < movieList.querySelectorAll("li").length; i++){
             const movieElement = movieList.querySelectorAll("li")[i];
