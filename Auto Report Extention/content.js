@@ -27,7 +27,7 @@ function getIFLAME(){
                 if(movieList.querySelectorAll("li")[i+1].classList.contains("supplement")){
                   i++;
                 }else{ break };
-              } else { break };
+              }else{ break };
             };
 
             if(movieElement.querySelector("a").classList.contains("is-selected")){
