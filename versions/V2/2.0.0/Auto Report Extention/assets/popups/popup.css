@@ -1,0 +1,91 @@
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 400px;
+}
+.setting-form{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+.setting-item{
+    text-align: center;
+    height: 50px;
+    padding: 0 5px 5px 5px;
+    margin: 0 5px 5px 5px;
+    border-bottom: solid 1px rgb(46, 46, 46);
+    display: flex;
+    align-items: center;
+}
+input[type="color"] {
+    border: none;
+    width: 25px;
+}
+input{
+    margin-left: 10px;
+}
+select{
+    font-family: 'Noto Sans JP', sans-serif;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.audio_play{
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-left: 10px;
+    height: 25px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    transition: 300ms;
+}
+.audio_play:hover{
+    background-color: rgb(75, 75, 75);
+    cursor: pointer;
+}
+.volume_text{
+    width: 30px;
+    text-align: center;
+    border: none;
+    border-bottom: solid black 1px;
+    outline: none;
+    transition: 500ms;
+}
+.volume_text:focus{
+    border-bottom: solid rgb(32, 136, 255) 1px;
+}
+.warningMessage{
+    opacity: 0;
+    height: 0;
+    padding-left: 10px;
+    margin-left: 25px;
+    padding-right: 0;
+    color: red;
+    margin-bottom: 0;
+    border-left: solid 1px black;
+    display: none;
+
+    transition: height 300ms, opacity 300ms;
+}
+.reload_btn{
+    color: rgb(0, 128, 255);
+    transition: 300ms;
+}
+.reload_btn:hover{
+    color: rgb(74, 180, 255);
+    cursor: pointer;
+}
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+.childlen-item{
+    margin-top: 15px;
+    margin-left: 25px;
+    padding-left: 10px;
+    border-left: solid 1px black;
+
+    transition: height 300ms, opacity 300ms, margin-top 300ms;
+}

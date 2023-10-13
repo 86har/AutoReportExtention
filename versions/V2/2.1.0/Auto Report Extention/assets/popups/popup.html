@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 style="line-height: 1;">A<span style="font-size: 18px;color: #4f4f4f;">uto</span>  R<span style="font-size: 18px;color: #4f4f4f;">port</span>  E<span style="font-size: 18px;color: #4f4f4f;">xtention</span><br><span style="font-size: 15px;color: #444444;">Setting Page</span></h1>
+  <!-- <h1 style="line-height: 1;">自<span style="font-size: 15px;color: #4f4f4f;">動で</span>  レ<span style="font-size: 15px;color: #4f4f4f;">ポート</span>  や<span style="font-size: 15px;color: #4f4f4f;">ってくれーる君</span><br><span style="font-size: 15px;color: #444444;">Setting Page</span></h1> -->
+  <fieldset class="setting-form">
+    <legend>機能設定</legend>
+    <div class="setting-item">
+      <label style="text-align: left;" for="background_play">バックグラウンド再生を有効にする</label>
+      <input id="js_background_play" type="checkbox" name="background_play">
+    </div>
+    <div class="setting-item">
+      <label for="auto_play">自動再生を有効にする</label>
+      <input id="js_auto_play" type="checkbox" name="auto_play"><br>
+    </div>
+
+  </fieldset>
+  <fieldset class="setting-form">
+    <legend>通知設定</legend>
+    <div class="setting-item">
+      <label for="screen_flashing">画面を点滅させる</label>
+      <input id="js_screen_flashing" type="checkbox" name="screen_flashing">
+    </div>
+    <div id="js_screen_flashing_child" class="childlen-item">
+      <div class="setting-item">
+        <label for="screen_flashing_color">点滅色</label>
+        <input id="js_screen_flashing_color" type="color" class="color-bar" name="screen_flashing_color">
+      </div>
+      <div class="setting-item">
+        <label for="flashing_count">点滅回数</label>
+        <input name="flashing_count" maxlength="2" type="text" id="js_flashing_count_text" class="volume_text">
+        <input type="range" id="js_flashing_count_slider" min="1" max="15" step="1">
+      </div>
+    </div>
+    <div class="setting-item">
+      <label for="audio_play_set">通知音を再生する</label>
+      <input id="js_notice_sound" type="checkbox" name="audio_play_set">
+    </div>
+
+    <div id="js_audio_child" class="childlen-item">
+      <div class="setting-item">
+        <label for="audio_number">通知音</label>
+        <select name="audio_number" id="js_audio_number">
+          <option value="0">タイマー1</option>
+          <option value="1">タイマー2</option>
+          <option value="2">タイマー3</option>
+          <option value="3">レーダー(iphone)</option>
+        </select>
+        <button id="js_audio_play" class="audio_play">再生</button>
+      </div>
+      <div class="setting-item">
+        <label for="audio_volume">通知の音量</label>
+        <input name="audio_volume" maxlength="3" type="text" id="js_volume_text" class="volume_text">
+        <input type="range" id="js_volume_slider" min="0" max="100" step="1">
+      </div>
+    </div>
+  </fieldset>
+  <script src="popup.js" defer></script>
+</body>
+</html>
