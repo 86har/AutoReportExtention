@@ -1,4 +1,4 @@
-# バージョンV1
+# AutoReportExtention version1
 
 ## 機能一覧
 #### ・動画の自動スキップ
