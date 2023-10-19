@@ -83,17 +83,13 @@ function setVideoEvent(){
         playingVideoSrc = video.querySelector("source").src;
       }
       
-      video.play().catch(error => {
-        console.error('Video play failed:', error);
-
+      video.play().catch(() => {
         setTimeout(() => {
           video.play()
           setTimeout(() => {
             video.play()
           }, 6000);
         }, 2000);
-
-        // 必要に応じて、ユーザーにメッセージを表示するなどの追加のアクションを行うことができます。
       });
 
       getElementsByClassNames("sc-192m11g-2 itwYZr", iframeDocument).addEventListener("click", ()=>{
@@ -101,22 +97,10 @@ function setVideoEvent(){
         pauseActionInvalid = true;
       })
 
-      // function tryClick(nextVideo) {
-      //   try {
-      //     getElementsByClassNames("sc-aXZVg sc-gEvEer hYNtMZ fteAEG sc-1otp79h-0 sc-35qwhb-0 evJGlU cpELFc", nextVideo).click();
-      //   } catch (error) {
-      //     console.log(nextVideo)
-      //     setTimeout(() => tryClick(nextVideo), 100);  // 0.1秒後に再試行
-      //   }
-      // }
-
-      video.addEventListener('timeupdate', ()=>{
-        console.log(video.currentTime);
-      })
-
       video.addEventListener("seeked", ()=>{
         if(!(seekActionInvalid)) pauseActionInvalid = false;
       })
+
       video.addEventListener("seeking", ()=>{
         if(!(seekActionInvalid)) pauseActionInvalid = true;
       })
@@ -146,12 +130,11 @@ function setVideoEvent(){
               if(getElementsByClassNames("sc-aXZVg sc-gEvEer hYNtMZ fteAEG sc-1otp79h-0 sc-35qwhb-0 evJGlU crtNbk", listElm) !== undefined){
                 videoNumber = listNumber;
               }
-  
             })
-  
+
             let nextVideo = videoLists[videoNumber+1];
             let skipCounter = 1;
-  
+
             for(;;){
               if(getElementsByClassNames("sc-x54faw-0 fqBzHf", videoLists[videoNumber+skipCounter]) === undefined && getElementsByClassNames("sc-x54faw-0 fsxYnC", videoLists[videoNumber+skipCounter]) === undefined){
                 nextVideo = videoLists[videoNumber+skipCounter];
@@ -201,15 +184,11 @@ function checkVideoElement(callback) {
     })
   
     if (elementLoaded) {
-      console.log("loaded")
       callback(elements);
     } else {
-      console.log("non loaded")
       setTimeout(() => {checkVideoElement(callback);}, 100);
     }
   }else{
-    console.log("non loaded")
-
     setTimeout(() => {checkVideoElement(callback);}, 100);
   }
 }
@@ -233,7 +212,6 @@ checkVideoElement((elements)=>{
   document.querySelector("body").style.display = "block"
 
   elements.forEach((element, videoNumber)=>{
-    // sc-aXZVg daZTuV
     if(getElementsByClassNames("sc-aXZVg fUVLbK",element) !== undefined){
       console.log(`element: ${getElementsByClassNames("sc-aXZVg fUVLbK",element).innerText}\nnumber :${videoNumber}`)
     }else{

@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Auto Report Extention(beta-2)",
+  "name": "Auto Report Extention",
   "version": "2.1.0",
   "description": "レポートの自動スキップ機能を追加する拡張機能です。\n他にもバックグラウンド再生等の機能も用意しています。",
   "permissions": ["scripting", "storage","tabs", "webNavigation", "activeTab"],

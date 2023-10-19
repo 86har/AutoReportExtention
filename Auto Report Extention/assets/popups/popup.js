@@ -29,10 +29,8 @@ let audio;
 let settingDatas = initialSettingDatas;
 chrome.storage.sync.get(['settingDatas'], function(result){
     let data = result['settingDatas'];
-
-    // 強制的に初期化させるには下記のコードを実行
     // data = undefined
-
+    
     if (data === undefined) {
         chrome.storage.sync.set({ "settingDatas": initialSettingDatas });
     }else{
